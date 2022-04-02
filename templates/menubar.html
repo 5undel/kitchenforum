@@ -1,0 +1,23 @@
+<div class="header-wrapper">
+    <div class="logo">
+        <a href="/"><h1>Kitchen Forum</h1></a>
+    </div>
+    {% if request.user.is_authenticated %}
+    <p>Hello <a href=""> {{ request.user }}</a></p>
+    {% else %}
+    <p> </p>
+    <br>
+    <br>
+    {% endif %}
+
+    {% if request.user.is_authenticated %}
+    <a href="">Log out</a>
+    {% else %}
+    <a href="">Log in</a>
+    {% endif %}
+    
+    <form method="GET" action="">
+        <input type="text" name="r" placeholder="Search"/>
+    </form>
+    <hr>
+</div>
